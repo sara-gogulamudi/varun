@@ -1,0 +1,170 @@
+/* Resetting some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic body styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(45deg, #f8b400, #ff9a8b, #f9c4d2);
+    background-size: 400% 400%;
+    animation: gradient 5s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Aligning content to top */
+    min-height: 100vh;
+    overflow-x: hidden; /* Hides horizontal overflow */
+}
+
+/* Smooth animated gradient */
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Main container (Make it scrollable) */
+.container {
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    z-index: 10;
+    max-width: 100%;
+    max-height: 100vh;  /* Limit height to viewport */
+    overflow-y: scroll; /* Enable vertical scroll */
+    margin-top: 20px; /* Space for scroll */
+    padding-bottom: 50px; /* Make space for footer */
+}
+
+/* Header */
+.header h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 3em;
+    color: #fff;
+    margin-bottom: 10px;
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.subheading {
+    font-size: 1.5em;
+    margin-top: 10px;
+    color: #fffcfc;
+    font-weight: 400;
+}
+
+/* Celebration Section */
+.celebration {
+    margin: 30px 0;
+    position: relative;
+}
+
+/* Balloons */
+.balloon {
+    font-size: 4em;
+    animation: float 4s ease-in-out infinite;
+}
+
+.balloon-1 {
+    animation-delay: 0s;
+    position: relative;
+    top: 20px;
+}
+
+.balloon-2 {
+    animation-delay: 1s;
+    position: relative;
+    top: 10px;
+}
+
+.balloon-3 {
+    animation-delay: 2s;
+    position: relative;
+    top: 5px;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0); }
+}
+
+/* Cake */
+.cake {
+    font-size: 4em;
+    margin-top: 30px;
+}
+
+.cake-text {
+    font-size: 1.5em;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+/* Footer Section */
+.footer {
+    margin-top: 20px;
+}
+
+.celebrate-button {
+    padding: 15px 30px;
+    background-color: #f6f6f6;
+    border: none;
+    font-size: 1.2em;
+    color: #ff5733;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.celebrate-button:hover {
+    background-color: #ff5733;
+    color: #fff;
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Confetti Animation */
+.confetti {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 5;
+}
+
+.confetti-piece {
+    position: absolute;
+    background-color: #ff5733;
+    width: 12px;
+    height: 12px;
+    animation: confetti 3s infinite;
+}
+
+.confetti-piece:nth-child(odd) {
+    background-color: #f6f6f6;
+}
+
+.confetti-piece:nth-child(3) {
+    background-color: #f9c4d2;
+}
+
+@keyframes confetti {
+    0% {
+        transform: translateY(0) rotate(45deg);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(100px) rotate(180deg);
+        opacity: 0.7;
+    }
+    100% {
+        transform: translateY(200px) rotate(360deg);
+        opacity: 0;
+    }
+}

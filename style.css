@@ -1,0 +1,51 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+
+/* Letter Design */
+.letter {
+    width: 500px;
+    max-width: 100%;
+    background: #fff;
+    border: 2px solid #333;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-image: linear-gradient(135deg, #f8f9fa, #ffffff);
+}
+
+.letter-header h2 {
+    font-size: 2.5em;
+    color: #333;
+    text-align: left;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.letter-body {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.letter-footer {
+    font-size: 1.2em;
+    text-align: right;
+    font-weight: 500;
+    color: #333;
+}
